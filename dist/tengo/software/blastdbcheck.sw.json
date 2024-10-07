@@ -1,0 +1,1 @@
+{"name":"@platforma-open/blast:blastdbcheck","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/blast/2.16.0/2.16.0-{os}-{arch}.tgz","cmd":["{pkg}/blastdbcheck"],"envVars":[]}}
