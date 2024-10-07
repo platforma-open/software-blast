@@ -51,7 +51,7 @@ files_to_check=(
 for f in "${files_to_check[@]}"; do
     if ! [ -f "${f}" ]; then
         echo ""
-        echo "No software descriptor found at '${f}'."
+        echo "No entrypoint descriptor found at '${f}'."
         echo ""
         echo "Looks like you're going to publish new version of blast distribution."
         echo "See README.md for the instructions on how to do this properly."
