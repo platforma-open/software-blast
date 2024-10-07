@@ -1,0 +1,1 @@
+{"name":"@platforma-open/blast:blast_formatter_vdb","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/blast/2.16.0/2.16.0-{os}-{arch}.tgz","cmd":["{pkg}/blast_formatter_vdb"],"envVars":[]}}
