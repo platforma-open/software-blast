@@ -22,6 +22,10 @@ fi
 #
 version="${1}"
 
+# Fast-track: make descriptors at the very beginning as packages download may take a while
+pl-pkg build descriptors \
+    --package-id="${version}"
+
 ./2.x/pkg-download.sh "${version}" macosx x64
 ./2.x/pkg-download.sh "${version}" macosx aarch64
 ./2.x/pkg-download.sh "${version}" linux x64
@@ -31,6 +35,3 @@ version="${1}"
 pl-pkg build packages \
     --package-id="${version}" \
     --all-platforms
-
-pl-pkg build descriptors \
-    --package-id="${version}"
