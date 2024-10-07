@@ -37,8 +37,8 @@ jobs:
 
       publish-script-name: 'release'
 
-      aws-login-enable: false
-      gcp-login-enable: false
+      aws-login-enable: true
+      gcp-login-enable: true
 
     secrets:
       env: |
