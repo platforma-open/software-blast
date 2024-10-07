@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Blast software package for Platforma Backend",
   "scripts": {
-    "build": "pkg:build",
+    "build": "npm run pkg:build",
     "pkg:build": "rm -rf dld && ./scripts/build.sh 2.16.0",
     "publish:packages": "./scripts/publish.sh 2.16.0",
     "publish:descriptors": "pl-pkg publish descriptors",
@@ -15,7 +15,7 @@
   "block-software": {
     "artifacts": {
       "2.16.0": {
-        "registry": "pl-open",
+        "registry": "platforma-open",
         "version": "2.16.0",
         "type": "binary",
         "roots": {
