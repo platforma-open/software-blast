@@ -82,6 +82,6 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "@platforma-sdk/package-builder": "^2.9.0"
+    "@platforma-sdk/package-builder": "^2.9.1"
   }
 }
