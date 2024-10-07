@@ -1,6 +1,6 @@
 {
   "name": "@platforma-open/blast",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Blast software package for Platforma Backend",
   "scripts": {
     "build": "true",
