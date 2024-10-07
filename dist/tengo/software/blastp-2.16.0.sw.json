@@ -1,0 +1,1 @@
+{"name":"@platforma-open/blast:blastp-2.16.0","binary":{"type":"binary","registry":"milaboratories","package":"platforma-open/blast/2.16.0/2.16.0-{os}-{arch}.tgz","cmd":["{pkg}/blastp"],"envVars":[]}}

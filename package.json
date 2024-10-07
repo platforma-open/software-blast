@@ -1,0 +1,62 @@
+{
+  "name": "@platforma-open/blast",
+  "version": "0.0.1",
+  "description": "Blast software package for Platforma Backend",
+  "scripts": {
+    "build": "true",
+    "pkg:build": "rm -rf dld && ./scripts/build.sh 2.16.0",
+    "publish:packages": "./scripts/publish.sh 2.16.0",
+    "publish:descriptors": "pl-pkg publish descriptors",
+    "release": "npm run pkg:build && npm run publish:packages && npm run publish:descriptors"
+  },
+  "files": [
+    "dist/"
+  ],
+  "block-software": {
+    "artifacts": {
+      "2.16.0": {
+        "registry": "pl-open",
+        "version": "2.16.0",
+        "type": "binary",
+        "roots": {
+          "linux-x64": "./dld/blast-2.16.0-linux-x64",
+          "linux-aarch64": "./dld/blast-2.16.0-linux-aarch64",
+          "macosx-x64": "./dld/blast-2.16.0-macosx-x64",
+          "macosx-aarch64": "./dld/blast-2.16.0-macosx-aarch64",
+          "windows-x64": "./dld/blast-2.16.0-windows-x64"
+        },
+        "binDir": "bin"
+      }
+    },
+    "entrypoints": {
+      "blast_formatter-2.16.0":     { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blast_formatter"] } },
+      "blast_formatter_vdb-2.16.0": { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blast_formatter_vdb"] } },
+      "blast_vdb_cmd-2.16.0":       { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blast_vdb_cmd"] } },
+      "blastdb_aliastool-2.16.0":   { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blastdb_aliastool"] } },
+      "blastdbcheck-2.16.0":        { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blastdbcheck"] } },
+      "blastdbcmd-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blastdbcmd"] } },
+      "blastn-2.16.0":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blastn"] } },
+      "blastn_vdb-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blastn_vdb"] } },
+      "blastp-2.16.0":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blastp"] } },
+      "blastx-2.16.0":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/blastx"] } },
+      "convert2blastmask-2.16.0":   { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/convert2blastmask"] } },
+      "deltablast-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/deltablast"] } },
+      "dustmasker-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/dustmasker"] } },
+      "makeblastdb-2.16.0":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/makeblastdb"] } },
+      "makembindex-2.16.0":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/makembindex"] } },
+      "makeprofiledb-2.16.0":       { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/makeprofiledb"] } },
+      "psiblast-2.16.0":            { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/psiblast"] } },
+      "rpsblast-2.16.0":            { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/rpsblast"] } },
+      "rpstblastn-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/rpstblastn"] } },
+      "segmasker-2.16.0":           { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/segmasker"] } },
+      "tblastn-2.16.0":             { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/tblastn"] } },
+      "tblastn_vdb-2.16.0":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/tblastn_vdb"] } },
+      "tblastx-2.16.0":             { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/tblastx"] } },
+      "windowmasker-2.16.0":        { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/windowmasker"] } }
+    }
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@milaboratory/pl-package-builder": "^2.8.0"
+  }
+}
