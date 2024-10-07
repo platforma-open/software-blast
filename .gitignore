@@ -1,2 +1,3 @@
 /dld/
 pkg-*.tgz
+/node_modules/

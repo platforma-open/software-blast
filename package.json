@@ -57,6 +57,6 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "@milaboratory/pl-package-builder": "^2.8.0"
+    "@platforma-sdk/package-builder": "^2.9.0"
   }
 }
