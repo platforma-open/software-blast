@@ -50,11 +50,17 @@ function download() {
     local _suffix=""
 
     local _os="${os}"
+    local _arch="${arch}"
+
     if [ "${os}" == "windows" ]; then
         _os="win64"
     fi
+    if [ "${os}" == "macosx" ]; then
+        # for older versions of blast, download x64 instead of aarch64 (no aarch64 was built before 2.16.0)
+        _arch="x64"
+    fi
 
-    local _url="${base_url}/${version}/ncbi-blast-${version}+-${arch}-${_os}.${_ext}"
+    local _url="${base_url}/${version}/ncbi-blast-${version}+-${_arch}-${_os}.${_ext}"
 
     local _show_progress=("--show-progress")
     if [ "${CI:-}" = "true" ]; then
