@@ -1,0 +1,1 @@
+{"name":"@platforma-open/milaboratories.software-blast:blast_vdb_cmd-2.14.1","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.14.1/2.14.1-{os}-{arch}.tgz","cmd":["{pkg}/blast_vdb_cmd"],"envVars":[]}}

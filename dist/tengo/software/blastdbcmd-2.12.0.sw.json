@@ -1,0 +1,1 @@
+{"name":"@platforma-open/milaboratories.software-blast:blastdbcmd-2.12.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.12.0/2.12.0-{os}-{arch}.tgz","cmd":["{pkg}/blastdbcmd"],"envVars":[]}}

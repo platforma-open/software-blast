@@ -1,0 +1,1 @@
+{"name":"@platforma-open/milaboratories.software-blast:tblastn-2.13.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.13.0/2.13.0-{os}-{arch}.tgz","cmd":["{pkg}/tblastn"],"envVars":[]}}

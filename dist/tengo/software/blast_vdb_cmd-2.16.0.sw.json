@@ -1,1 +1,1 @@
-{"name":"@platforma-open/blast:blast_vdb_cmd-2.16.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/blast/2.16.0/2.16.0-{os}-{arch}.tgz","cmd":["{pkg}/blast_vdb_cmd"],"envVars":[]}}
+{"name":"@platforma-open/milaboratories.software-blast:blast_vdb_cmd-2.16.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.16.0/2.16.0-{os}-{arch}.tgz","cmd":["{pkg}/blast_vdb_cmd"],"envVars":[]}}
