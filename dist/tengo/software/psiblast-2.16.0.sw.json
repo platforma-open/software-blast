@@ -1,1 +1,1 @@
-{"name":"@platforma-open/milaboratories.software-blast:psiblast-2.16.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.16.0/2.16.0-{os}-{arch}.tgz","cmd":["{pkg}/psiblast"],"envVars":[]}}
+{"name":"@platforma-open/milaboratories.software-blast:psiblast-2.16.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.16.0/2.16.0-{os}-{arch}.tgz","cmd":["{pkg}/bin/psiblast"],"envVars":[]}}

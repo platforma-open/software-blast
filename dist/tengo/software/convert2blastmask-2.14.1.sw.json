@@ -1,1 +1,1 @@
-{"name":"@platforma-open/milaboratories.software-blast:convert2blastmask-2.14.1","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.14.1/2.14.1-{os}-{arch}.tgz","cmd":["{pkg}/convert2blastmask"],"envVars":[]}}
+{"name":"@platforma-open/milaboratories.software-blast:convert2blastmask-2.14.1","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.14.1/2.14.1-{os}-{arch}.tgz","cmd":["{pkg}/bin/convert2blastmask"],"envVars":[]}}

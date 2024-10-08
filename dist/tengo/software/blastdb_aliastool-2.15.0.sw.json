@@ -1,1 +1,1 @@
-{"name":"@platforma-open/milaboratories.software-blast:blastdb_aliastool-2.15.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.15.0/2.15.0-{os}-{arch}.tgz","cmd":["{pkg}/blastdb_aliastool"],"envVars":[]}}
+{"name":"@platforma-open/milaboratories.software-blast:blastdb_aliastool-2.15.0","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.15.0/2.15.0-{os}-{arch}.tgz","cmd":["{pkg}/bin/blastdb_aliastool"],"envVars":[]}}
