@@ -25,7 +25,6 @@ jobs:
       app-name: Blast PL package
       app-name-slug: 'blast'
       notify-telegram: true
-      registry-url: https://registry.npmjs.org
 
       node-version: '20.x'
       is-electron-application: 'false'
@@ -36,13 +35,24 @@ jobs:
       test: false
       test-script-name: 'test'
 
+      publish-to-public: true
       aws-login-enable: true
       gcp-login-enable: true
 
+      npmrc-config: |
+        {
+          "registries": {
+            "https://registry.npmjs.org/": {
+              "scopes": ["platforma-open"],
+              "tokenVar": "NPMJS_TOKEN"
+            }
+          }
+        }
     secrets:
       env: |
         {
-          "PL_REGISTRY_PLATFORMA_OPEN_UPLOAD_URL": ${{ toJSON(secrets.PL_REGISTRY_PLOPEN_UPLOAD_URL) }}
+          "PL_REGISTRY_PLATFORMA_OPEN_UPLOAD_URL": ${{ toJSON(secrets.PL_REGISTRY_PLOPEN_UPLOAD_URL) }},
+          "NPMJS_TOKEN": ${{ toJSON(secrets.NPMJS_TOKEN) }}
         }
 
       AWS_ASSUME_ROLE: ${{ secrets.AWS_CI_IAM_MONOREPO_SIMPLE_ROLE }}
