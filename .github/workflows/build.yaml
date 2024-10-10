@@ -36,8 +36,6 @@ jobs:
       test: false
       test-script-name: 'test'
 
-      publish-script-name: 'release'
-
       aws-login-enable: true
       gcp-login-enable: true
 

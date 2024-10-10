@@ -4,11 +4,11 @@
   "description": "Blast software package for Platforma Backend",
   "scripts": {
     "build": "true",
-    "pkg:build": "rm -rf dld && ./scripts/build.sh 2.16.0",
 
-    "publish:packages": "./scripts/publish.sh 2.16.0",
-    "publish:descriptors": "pl-pkg publish descriptors",
-    "release": "npm run pkg:build && npm run publish:packages && npm run publish:descriptors"
+    "pkg:build": "rm -rf dld && ./scripts/build.sh 2.16.0",
+    "pkg:publish": "./scripts/publish.sh 2.16.0",
+
+    "prepublishOnly": "npm run pkg:build && npm run pkg:publish"
   },
   "files": [
     "dist/"
