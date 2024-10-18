@@ -31,6 +31,20 @@ os="linux"
 dst_root="dld"
 dst_data_dir="${dst_root}/blast-${version}-${os}-${arch}"
 
+#
+# Functions
+#
+
+function isELFBinary() {
+    local _path="${1}"
+
+    file "${_path}" | grep -q " ELF "
+}
+
+#
+# Script body
+#
+
 # Copy libraries into the distribution
 echo "Copying libraries to '${dst_data_dir}/bin/' ..."
 cp -R "libs/${arch}/" "${dst_data_dir}/bin/"
@@ -39,7 +53,11 @@ cp -R "libs/${arch}/" "${dst_data_dir}/bin/"
 echo "Patching binaries so the find libraries in '${dst_data_dir}/bin/' ..."
 find "${dst_data_dir}/bin/" -type f -executable |
     while read -r binary; do
-        echo "\tpatching '${binary}'..."
+        if ! isELFBinary "${binary}"; then
+            continue
+        fi
+
+        printf "\tpatching '%s'...\n" "${binary}"
         patchelf \
             --set-rpath '$ORIGIN' \
             "${binary}"
