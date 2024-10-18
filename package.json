@@ -1,6 +1,6 @@
 {
   "name": "@platforma-open/milaboratories.software-blast",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Blast software package for Platforma Backend",
   "scripts": {
     "build": "true",
@@ -17,7 +17,7 @@
     "artifacts": {
       "2.16.0": {
         "registry": "platforma-open",
-        "version": "2.16.0",
+        "version": "2.16.0-1",
         "type": "binary",
         "roots": {
           "linux-x64": "./dld/blast-2.16.0-linux-x64",

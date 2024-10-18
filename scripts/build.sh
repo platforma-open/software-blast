@@ -28,8 +28,12 @@ pl-pkg build descriptors \
 
 ./2.x/pkg-download.sh "${version}" macosx x64
 ./2.x/pkg-download.sh "${version}" macosx aarch64
+
 ./2.x/pkg-download.sh "${version}" linux x64
+./2.x/linux-add-libs.sh "${version}" x64
 ./2.x/pkg-download.sh "${version}" linux aarch64
+./2.x/linux-add-libs.sh "${version}" aarch64
+
 ./2.x/pkg-download.sh "${version}" windows x64
 
 pl-pkg build packages \

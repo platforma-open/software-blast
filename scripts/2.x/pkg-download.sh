@@ -37,9 +37,7 @@ arch="${3}"
 dst_root="dld"
 dst_data_dir="${dst_root}/blast-${version}-${os}-${arch}"
 
-dst_archive_ext="tar.gz"
-# Dirty change of the 'global' state from inside the function
-dst_archive_path="${dst_root}/blast-${version}-${os}-${arch}.${dst_archive_ext}"
+dst_archive_path="${dst_root}/blast-${version}-${os}-${arch}.tar.gz"
 
 function log() {
     printf "%s\n" "${*}"
