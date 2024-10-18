@@ -1,12 +1,12 @@
 {
   "name": "@platforma-open/milaboratories.software-blast",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Blast software package for Platforma Backend",
   "scripts": {
     "build": "true",
 
-    "pkg:build": "rm -rf dld && ./scripts/build.sh 2.16.0",
-    "pkg:publish": "./scripts/publish.sh 2.16.0",
+    "pkg:build": "rm -rf dld && ./scripts/build.sh 2.15.0 && ./scripts/build.sh 2.14.1",
+    "pkg:publish": "./scripts/publish.sh 2.15.0 && ./scripts/publish.sh 2.14.1",
 
     "prepublishOnly": "npm run pkg:build && npm run pkg:publish"
   },
@@ -29,7 +29,7 @@
       },
       "2.15.0": {
         "registry": "platforma-open",
-        "version": "2.15.0",
+        "version": "2.15.0-1",
         "type": "binary",
         "roots": {
           "linux-x64":      "./dld/blast-2.15.0-linux-x64",
@@ -41,7 +41,7 @@
       },
       "2.14.1": {
         "registry": "platforma-open",
-        "version": "2.14.1",
+        "version": "2.14.1-1",
         "type": "binary",
         "roots": {
           "linux-x64":      "./dld/blast-2.14.1-linux-x64",
