@@ -47,7 +47,7 @@ function isELFBinary() {
 
 # Copy libraries into the distribution
 echo "Copying libraries to '${dst_data_dir}/bin/' ..."
-cp -R "libs/${arch}/" "${dst_data_dir}/bin/"
+rsync -a "libs/${arch}/" "${dst_data_dir}/bin/"
 
 # Patch binaries so they find copied libraries
 echo "Patching binaries so the find libraries in '${dst_data_dir}/bin/' ..."
