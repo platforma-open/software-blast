@@ -32,11 +32,14 @@ dst_root="dld"
 dst_data_dir="${dst_root}/blast-${version}-${os}-${arch}"
 
 # Copy libraries into the distribution
+echo "Copying libraries to '${dst_data_dir}/bin/' ..."
 cp -R "libs/${arch}/" "${dst_data_dir}/bin/"
 
 # Patch binaries so they find copied libraries
+echo "Patching binaries so the find libraries in '${dst_data_dir}/bin/' ..."
 find "${dst_data_dir}/bin/" -type f -executable |
     while read -r binary; do
+        echo "\tpatching '${binary}'..."
         patchelf \
             --set-rpath '$ORIGIN' \
             "${binary}"
