@@ -1,3 +1,5 @@
-/dld/
+.turbo
+node_modules/
+dld/
+dist/
 pkg-*.tgz
-/node_modules/

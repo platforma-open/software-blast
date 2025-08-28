@@ -7,7 +7,6 @@ set -o nounset
 # Script state init
 #
 script_dir="$(cd "$(dirname "${0}")" && pwd)"
-cd "${script_dir}/../../"
 
 base_url="https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+"
 
@@ -35,9 +34,9 @@ version="${1}"
 os="${2}"
 arch="${3}"
 dst_root="dld"
-dst_data_dir="${dst_root}/blast-${version}-${os}-${arch}"
+dst_data_dir="${dst_root}/${os}-${arch}"
 
-dst_archive_path="${dst_root}/blast-${version}-${os}-${arch}.tar.gz"
+dst_archive_path="${dst_root}/${os}-${arch}.tar.gz"
 
 function log() {
     printf "%s\n" "${*}"

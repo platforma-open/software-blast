@@ -1,0 +1,46 @@
+{
+    "name": "@platforma-open/milaboratories.software-blast",
+    "version": "1.2.0",
+    "description": "Blast software package for Platforma Backend",
+    "scripts": {
+      "build": "true",
+      "prepublishOnly": "pl-pkg prepublish"
+    },
+    "files": [
+      "dist/"
+    ],
+    "block-software": {
+      "entrypoints": {
+        "blast_formatter":     { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blast_formatter.sw.json" },
+        "blast_formatter_vdb": { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blast_formatter_vdb.sw.json" },
+        "blast_vdb_cmd":       { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blast_vdb_cmd.sw.json" },
+        "blastdb_aliastool":   { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blastdb_aliastool.sw.json" },
+        "blastdbcheck":        { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blastdbcheck.sw.json" },
+        "blastdbcmd":          { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blastdbcmd.sw.json" },
+        "blastn":              { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blastn.sw.json" },
+        "blastn_vdb":          { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blastn_vdb.sw.json" },
+        "blastp":              { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blastp.sw.json" },
+        "blastx":              { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/blastx.sw.json" },
+        "convert2blastmask":   { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/convert2blastmask.sw.json" },
+        "deltablast":          { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/deltablast.sw.json" },
+        "dustmasker":          { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/dustmasker.sw.json" },
+        "makeblastdb":         { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/makeblastdb.sw.json" },
+        "makembindex":         { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/makembindex.sw.json" },
+        "makeprofiledb":       { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/makeprofiledb.sw.json" },
+        "psiblast":            { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/psiblast.sw.json" },
+        "rpsblast":            { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/rpsblast.sw.json" },
+        "rpstblastn":          { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/rpstblastn.sw.json" },
+        "segmasker":           { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/segmasker.sw.json" },
+        "tblastn":             { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/tblastn.sw.json" },
+        "tblastn_vdb":         { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/tblastn_vdb.sw.json" },
+        "tblastx":             { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/tblastx.sw.json" },
+        "windowmasker":        { "reference": "@platforma-open/milaboratories.software-blast.2.16.0/dist/tengo/software/windowmasker.sw.json" }
+      }
+    },
+    "license": "UNLICENSED",
+    "devDependencies": {
+      "@platforma-open/milaboratories.software-blast.2.16.0": "workspace:*",
+      "@platforma-sdk/package-builder": "catalog:"
+    }
+  }
+  

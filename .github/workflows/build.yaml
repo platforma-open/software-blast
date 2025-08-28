@@ -20,50 +20,47 @@ jobs:
     needs:
       - init
 
-    uses: milaboratory/github-ci/.github/workflows/node-simple.yaml@v4
+    uses: milaboratory/github-ci/.github/workflows/node-simple-pnpm.yaml@v4
     with:
       app-name: Blast PL package
       app-name-slug: 'blast'
-      notify-telegram: true
 
       node-version: '20.x'
-      is-electron-application: 'false'
-      always-auth: 'true'
-      registry-url: 'https://registry.npmjs.org'
-
       build-script-name: 'build'
+      pnpm-recursive-build: false
 
       test: false
       test-script-name: 'test'
+      pnpm-recursive-tests: false
 
       publish-to-public: true
-      aws-login-enable: true
-      gcp-login-enable: true
+      create-tag: true
 
       npmrc-config: |
         {
           "registries": {
             "https://registry.npmjs.org/": {
-              "scopes": ["platforma-open"],
+              "scopes": ["milaboratories", "platforma-open", "platforma-sdk"],
               "tokenVar": "NPMJS_TOKEN"
+            },
+            "https://npm.pkg.github.com/": {
+              "scopes": ["milaboratory"],
+              "tokenVar": "NODE_AUTH_TOKEN"
             }
           }
         }
+
     secrets:
       env: |
-        {
-          "PL_REGISTRY_PLATFORMA_OPEN_UPLOAD_URL": ${{ toJSON(secrets.PL_REGISTRY_PLOPEN_UPLOAD_URL) }},
-          "NPMJS_TOKEN": ${{ toJSON(secrets.NPMJS_TOKEN) }}
-        }
+        { "PL_REGISTRY_PLATFORMA_OPEN_UPLOAD_URL": ${{ toJSON(secrets.PL_REGISTRY_PLOPEN_UPLOAD_URL) }},
+          "QUAY_USERNAME": ${{ toJSON(secrets.QUAY_USERNAME) }},
+          "QUAY_ROBOT_TOKEN": ${{ toJSON(secrets.QUAY_ROBOT_TOKEN) }},
+          "NPMJS_TOKEN": ${{ toJSON(secrets.NPMJS_TOKEN) }},
+          "AWS_CI_IAM_MONOREPO_SIMPLE_ROLE": ${{ toJSON(secrets.AWS_CI_IAM_MONOREPO_SIMPLE_ROLE) }},
+          "AWS_CI_TURBOREPO_S3_BUCKET": ${{ toJSON(secrets.AWS_CI_TURBOREPO_S3_BUCKET) }} }
 
-      AWS_ASSUME_ROLE: ${{ secrets.AWS_CI_IAM_MONOREPO_SIMPLE_ROLE }}
-      AWS_ASSUME_REGION: "eu-central-1"
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      SLACK_CHANNEL: ${{ secrets.SLACK_BLOCKS_CI_CHANNEL }}
 
-      GCP_KMS_WORKLOAD_IDENTITY_PROVIDER: ${{ secrets.GCP_KMS_WORKLOAD_IDENTITY_PROVIDER }}
-      GCP_KMS_SERVICE_ACCOUNT: ${{ secrets.GCP_KMS_SERVICE_ACCOUNT }}
-      GCP_KMS_LOCATION: ${{ secrets.GCP_KMS_LOCATION }}
-      GCP_KMS_KEYRING: ${{ secrets.GCP_KMS_KEYRING }}
-      GCP_KMS_KEY_NAME: ${{ secrets.GCP_KMS_KEY_NAME }}
-
-      TELEGRAM_NOTIFICATION_TARGET: ${{ secrets.TG_CHANNEL_MIBUILDS }}
-      TELEGRAM_API_TOKEN: ${{ secrets.TG_CI_BOT_TOKEN }}
+      GH_ZEN_APP_ID: ${{ secrets.GH_ZEN_APP_ID }}
+      GH_ZEN_APP_PRIVATE_KEY: ${{ secrets.GH_ZEN_APP_PRIVATE_KEY }}

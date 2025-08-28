@@ -1,0 +1,86 @@
+{
+  "name": "@platforma-open/milaboratories.software-blast.2.14.1",
+  "version": "1.0.0",
+  "description": "Blast software package for Platforma Backend",
+  "scripts": {
+    "build": "../scripts/build.sh 2.14.1",
+    "prepublishOnly": "pl-pkg prepublish"
+  },
+  "files": [
+    "dist/"
+  ],
+  "block-software": {
+    "artifacts": {
+      "docker": {
+        "type": "docker",
+        "dockerfile": "Dockerfile",
+        "context": "./dld/linux-x64"
+      },
+      "archive": {
+        "registry": "platforma-open",
+        "type": "binary",
+        "roots": {
+          "linux-x64":      "./dld/linux-x64",
+          "linux-aarch64":  "./dld/linux-aarch64",
+          "macosx-x64":     "./dld/macosx-x64",
+          "macosx-aarch64": "./dld/macosx-aarch64",
+          "windows-x64":    "./dld/windows-x64"
+        }
+      }
+    },
+    "entrypoints": {
+      "blast_formatter":     { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blast_formatter"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blast_formatter"] } },
+      "blast_formatter_vdb": { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blast_formatter_vdb"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blast_formatter_vdb"] } },
+      "blast_vdb_cmd":       { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blast_vdb_cmd"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blast_vdb_cmd"] } },
+      "blastdb_aliastool":   { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blastdb_aliastool"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blastdb_aliastool"] } },
+      "blastdbcheck":        { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blastdbcheck"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blastdbcheck"] } },
+      "blastdbcmd":          { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blastdbcmd"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blastdbcmd"] } },
+      "blastn":              { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blastn"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blastn"] } },
+      "blastn_vdb":          { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blastn_vdb"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blastn_vdb"] } },
+      "blastp":              { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blastp"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blastp"] } },
+      "blastx":              { "docker": { "artifact": "docker",  "cmd": ["/app/bin/blastx"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/blastx"] } },
+      "convert2blastmask":   { "docker": { "artifact": "docker",  "cmd": ["/app/bin/convert2blastmask"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/convert2blastmask"] } },
+      "deltablast":          { "docker": { "artifact": "docker",  "cmd": ["/app/bin/deltablast"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/deltablast"] } },
+      "dustmasker":          { "docker": { "artifact": "docker",  "cmd": ["/app/bin/dustmasker"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/dustmasker"] } },
+      "makeblastdb":         { "docker": { "artifact": "docker",  "cmd": ["/app/bin/makeblastdb"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/makeblastdb"] } },
+      "makembindex":         { "docker": { "artifact": "docker",  "cmd": ["/app/bin/makembindex"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/makembindex"] } },
+      "makeprofiledb":       { "docker": { "artifact": "docker",  "cmd": ["/app/bin/makeprofiledb"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/makeprofiledb"] } },
+      "psiblast":            { "docker": { "artifact": "docker",  "cmd": ["/app/bin/psiblast"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/psiblast"] } },
+      "rpsblast":            { "docker": { "artifact": "docker",  "cmd": ["/app/bin/rpsblast"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/rpsblast"] } },
+      "rpstblastn":          { "docker": { "artifact": "docker",  "cmd": ["/app/bin/rpstblastn"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/rpstblastn"] } },
+      "segmasker":           { "docker": { "artifact": "docker",  "cmd": ["/app/bin/segmasker"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/segmasker"] } },
+      "tblastn":             { "docker": { "artifact": "docker",  "cmd": ["/app/bin/tblastn"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/tblastn"] } },
+      "tblastn_vdb":         { "docker": { "artifact": "docker",  "cmd": ["/app/bin/tblastn_vdb"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/tblastn_vdb"] } },
+      "tblastx":             { "docker": { "artifact": "docker",  "cmd": ["/app/bin/tblastx"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/tblastx"] } },
+      "windowmasker":        { "docker": { "artifact": "docker",  "cmd": ["/app/bin/windowmasker"] },
+                                "binary": { "artifact": "archive", "cmd": ["{pkg}/bin/windowmasker"] } }
+    }
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@platforma-sdk/package-builder": "catalog:"
+  }
+}

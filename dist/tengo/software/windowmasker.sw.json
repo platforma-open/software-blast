@@ -1,1 +1,0 @@
-{"name":"@platforma-open/milaboratories.software-blast:windowmasker","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-blast/2.16.0/2.16.0-1-{os}-{arch}.tgz","cmd":["{pkg}/bin/windowmasker"],"envVars":[]}}

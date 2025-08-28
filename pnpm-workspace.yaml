@@ -1,0 +1,12 @@
+packages:
+  - 2.14.1
+  - 2.15.0
+  - 2.16.0
+  - latest
+
+catalog:
+  'turbo': ^2.3.3
+  '@changesets/cli': ^2.27.10
+
+  "@platforma-sdk/package-builder": "^3.2.1"
+  "@platforma-sdk/blocks-deps-updater": "^2.0.0"

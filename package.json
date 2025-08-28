@@ -1,161 +1,21 @@
 {
-  "name": "@platforma-open/milaboratories.software-blast",
-  "version": "1.1.5",
-  "description": "Blast software package for Platforma Backend",
+  "name": "software-blast",
   "scripts": {
-    "build": "true",
-
-    "pkg:build": "rm -rf dld && ./scripts/build.sh 2.16.0",
-    "pkg:publish": "./scripts/publish.sh 2.16.0",
-
-    "prepublishOnly": "npm run pkg:build && npm run pkg:publish"
-  },
-  "files": [
-    "dist/"
-  ],
-  "block-software": {
-    "artifacts": {
-      "2.16.0": {
-        "registry": "platforma-open",
-        "version": "2.16.0-2",
-        "type": "binary",
-        "roots": {
-          "linux-x64": "./dld/blast-2.16.0-linux-x64",
-          "linux-aarch64": "./dld/blast-2.16.0-linux-aarch64",
-          "macosx-x64": "./dld/blast-2.16.0-macosx-x64",
-          "macosx-aarch64": "./dld/blast-2.16.0-macosx-aarch64",
-          "windows-x64": "./dld/blast-2.16.0-windows-x64"
-        }
-      },
-      "2.15.0": {
-        "registry": "platforma-open",
-        "version": "2.15.0-1",
-        "type": "binary",
-        "roots": {
-          "linux-x64":      "./dld/blast-2.15.0-linux-x64",
-          "linux-aarch64":  "./dld/blast-2.15.0-linux-aarch64",
-          "macosx-x64":     "./dld/blast-2.15.0-macosx-x64",
-          "macosx-aarch64": "./dld/blast-2.15.0-macosx-aarch64",
-          "windows-x64":    "./dld/blast-2.15.0-windows-x64"
-        }
-      },
-      "2.14.1": {
-        "registry": "platforma-open",
-        "version": "2.14.1-1",
-        "type": "binary",
-        "roots": {
-          "linux-x64":      "./dld/blast-2.14.1-linux-x64",
-          "linux-aarch64":  "./dld/blast-2.14.1-linux-aarch64",
-          "macosx-x64":     "./dld/blast-2.14.1-macosx-x64",
-          "macosx-aarch64": "./dld/blast-2.14.1-macosx-aarch64",
-          "windows-x64":    "./dld/blast-2.14.1-windows-x64"
-        }
-      }
-    },
-    "entrypoints": {
-      "blast_formatter":     { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blast_formatter"] } },
-      "blast_formatter_vdb": { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blast_formatter_vdb"] } },
-      "blast_vdb_cmd":       { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blast_vdb_cmd"] } },
-      "blastdb_aliastool":   { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastdb_aliastool"] } },
-      "blastdbcheck":        { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastdbcheck"] } },
-      "blastdbcmd":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastdbcmd"] } },
-      "blastn":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastn"] } },
-      "blastn_vdb":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastn_vdb"] } },
-      "blastp":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastp"] } },
-      "blastx":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastx"] } },
-      "convert2blastmask":   { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/convert2blastmask"] } },
-      "deltablast":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/deltablast"] } },
-      "dustmasker":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/dustmasker"] } },
-      "makeblastdb":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/makeblastdb"] } },
-      "makembindex":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/makembindex"] } },
-      "makeprofiledb":       { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/makeprofiledb"] } },
-      "psiblast":            { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/psiblast"] } },
-      "rpsblast":            { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/rpsblast"] } },
-      "rpstblastn":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/rpstblastn"] } },
-      "segmasker":           { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/segmasker"] } },
-      "tblastn":             { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/tblastn"] } },
-      "tblastn_vdb":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/tblastn_vdb"] } },
-      "tblastx":             { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/tblastx"] } },
-      "windowmasker":        { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/windowmasker"] } },
-
-      "blast_formatter-2.16.0":     { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blast_formatter"] } },
-      "blast_formatter_vdb-2.16.0": { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blast_formatter_vdb"] } },
-      "blast_vdb_cmd-2.16.0":       { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blast_vdb_cmd"] } },
-      "blastdb_aliastool-2.16.0":   { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastdb_aliastool"] } },
-      "blastdbcheck-2.16.0":        { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastdbcheck"] } },
-      "blastdbcmd-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastdbcmd"] } },
-      "blastn-2.16.0":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastn"] } },
-      "blastn_vdb-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastn_vdb"] } },
-      "blastp-2.16.0":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastp"] } },
-      "blastx-2.16.0":              { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/blastx"] } },
-      "convert2blastmask-2.16.0":   { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/convert2blastmask"] } },
-      "deltablast-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/deltablast"] } },
-      "dustmasker-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/dustmasker"] } },
-      "makeblastdb-2.16.0":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/makeblastdb"] } },
-      "makembindex-2.16.0":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/makembindex"] } },
-      "makeprofiledb-2.16.0":       { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/makeprofiledb"] } },
-      "psiblast-2.16.0":            { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/psiblast"] } },
-      "rpsblast-2.16.0":            { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/rpsblast"] } },
-      "rpstblastn-2.16.0":          { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/rpstblastn"] } },
-      "segmasker-2.16.0":           { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/segmasker"] } },
-      "tblastn-2.16.0":             { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/tblastn"] } },
-      "tblastn_vdb-2.16.0":         { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/tblastn_vdb"] } },
-      "tblastx-2.16.0":             { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/tblastx"] } },
-      "windowmasker-2.16.0":        { "binary": { "artifact": "2.16.0", "cmd": ["{pkg}/bin/windowmasker"] } },
-
-      "blast_formatter-2.15.0":     { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blast_formatter"] } },
-      "blast_formatter_vdb-2.15.0": { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blast_formatter_vdb"] } },
-      "blast_vdb_cmd-2.15.0":       { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blast_vdb_cmd"] } },
-      "blastdb_aliastool-2.15.0":   { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blastdb_aliastool"] } },
-      "blastdbcheck-2.15.0":        { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blastdbcheck"] } },
-      "blastdbcmd-2.15.0":          { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blastdbcmd"] } },
-      "blastn-2.15.0":              { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blastn"] } },
-      "blastn_vdb-2.15.0":          { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blastn_vdb"] } },
-      "blastp-2.15.0":              { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blastp"] } },
-      "blastx-2.15.0":              { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/blastx"] } },
-      "convert2blastmask-2.15.0":   { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/convert2blastmask"] } },
-      "deltablast-2.15.0":          { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/deltablast"] } },
-      "dustmasker-2.15.0":          { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/dustmasker"] } },
-      "makeblastdb-2.15.0":         { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/makeblastdb"] } },
-      "makembindex-2.15.0":         { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/makembindex"] } },
-      "makeprofiledb-2.15.0":       { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/makeprofiledb"] } },
-      "psiblast-2.15.0":            { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/psiblast"] } },
-      "rpsblast-2.15.0":            { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/rpsblast"] } },
-      "rpstblastn-2.15.0":          { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/rpstblastn"] } },
-      "segmasker-2.15.0":           { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/segmasker"] } },
-      "tblastn-2.15.0":             { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/tblastn"] } },
-      "tblastn_vdb-2.15.0":         { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/tblastn_vdb"] } },
-      "tblastx-2.15.0":             { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/tblastx"] } },
-      "windowmasker-2.15.0":        { "binary": { "artifact": "2.15.0", "cmd": ["{pkg}/bin/windowmasker"] } },
-
-      "blast_formatter-2.14.1":     { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blast_formatter"] } },
-      "blast_formatter_vdb-2.14.1": { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blast_formatter_vdb"] } },
-      "blast_vdb_cmd-2.14.1":       { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blast_vdb_cmd"] } },
-      "blastdb_aliastool-2.14.1":   { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blastdb_aliastool"] } },
-      "blastdbcheck-2.14.1":        { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blastdbcheck"] } },
-      "blastdbcmd-2.14.1":          { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blastdbcmd"] } },
-      "blastn-2.14.1":              { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blastn"] } },
-      "blastn_vdb-2.14.1":          { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blastn_vdb"] } },
-      "blastp-2.14.1":              { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blastp"] } },
-      "blastx-2.14.1":              { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/blastx"] } },
-      "convert2blastmask-2.14.1":   { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/convert2blastmask"] } },
-      "deltablast-2.14.1":          { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/deltablast"] } },
-      "dustmasker-2.14.1":          { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/dustmasker"] } },
-      "makeblastdb-2.14.1":         { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/makeblastdb"] } },
-      "makembindex-2.14.1":         { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/makembindex"] } },
-      "makeprofiledb-2.14.1":       { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/makeprofiledb"] } },
-      "psiblast-2.14.1":            { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/psiblast"] } },
-      "rpsblast-2.14.1":            { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/rpsblast"] } },
-      "rpstblastn-2.14.1":          { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/rpstblastn"] } },
-      "segmasker-2.14.1":           { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/segmasker"] } },
-      "tblastn-2.14.1":             { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/tblastn"] } },
-      "tblastn_vdb-2.14.1":         { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/tblastn_vdb"] } },
-      "tblastx-2.14.1":             { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/tblastx"] } },
-      "windowmasker-2.14.1":        { "binary": { "artifact": "2.14.1", "cmd": ["{pkg}/bin/windowmasker"] } }
-    }
+    "cleanup": "pnpm -r cleanup",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "update-sdk": "pl-blocks-deps-updater"
   },
   "license": "UNLICENSED",
+  "packageManager": "pnpm@9.14.4",
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
-    "@platforma-sdk/package-builder": "^2.9.2"
+    "turbo": "catalog:",
+    "@changesets/cli": "catalog:",
+    "@platforma-sdk/blocks-deps-updater": "catalog:"
   }
 }

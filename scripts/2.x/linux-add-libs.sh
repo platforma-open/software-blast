@@ -7,7 +7,6 @@ set -o nounset
 # Script state init
 #
 script_dir="$(cd "$(dirname "${0}")" && pwd)"
-cd "${script_dir}/../../"
 
 if [ "$#" -ne 2 ]; then
     echo ""
@@ -29,7 +28,7 @@ arch="${2}"
 
 os="linux"
 dst_root="dld"
-dst_data_dir="${dst_root}/blast-${version}-${os}-${arch}"
+dst_data_dir="${dst_root}/${os}-${arch}"
 
 #
 # Functions
@@ -47,10 +46,10 @@ function isELFBinary() {
 
 # Copy libraries into the distribution
 echo "Copying libraries to '${dst_data_dir}/bin/' ..."
-rsync -a "libs/${arch}/" "${dst_data_dir}/bin/"
+rsync -a "${script_dir}/../../libs/${arch}/" "${dst_data_dir}/bin/"
 
 # Patch binaries so they find copied libraries
-echo "Patching binaries so the find libraries in '${dst_data_dir}/bin/' ..."
+echo "Patching binaries so they find libraries in '${dst_data_dir}/bin/' ..."
 find "${dst_data_dir}/bin/" -type f -executable |
     while read -r binary; do
         if ! isELFBinary "${binary}"; then
