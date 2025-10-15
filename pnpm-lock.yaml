@@ -13,8 +13,8 @@ catalogs:
       specifier: ^2.0.0
       version: 2.0.0
     '@platforma-sdk/package-builder':
-      specifier: ^3.2.1
-      version: 3.2.1
+      specifier: ^3.8.0
+      version: 3.8.0
     turbo:
       specifier: ^2.3.3
       version: 2.5.6
@@ -25,7 +25,7 @@ importers:
     devDependencies:
       '@changesets/cli':
         specifier: 'catalog:'
-        version: 2.29.6(@types/node@20.16.15)
+        version: 2.29.6(@types/node@24.5.2)
       '@platforma-sdk/blocks-deps-updater':
         specifier: 'catalog:'
         version: 2.0.0
@@ -37,19 +37,19 @@ importers:
     devDependencies:
       '@platforma-sdk/package-builder':
         specifier: 'catalog:'
-        version: 3.2.1
+        version: 3.8.0
 
   2.15.0:
     devDependencies:
       '@platforma-sdk/package-builder':
         specifier: 'catalog:'
-        version: 3.2.1
+        version: 3.8.0
 
   2.16.0:
     devDependencies:
       '@platforma-sdk/package-builder':
         specifier: 'catalog:'
-        version: 3.2.1
+        version: 3.8.0
 
   latest:
     devDependencies:
@@ -58,7 +58,7 @@ importers:
         version: link:../2.16.0
       '@platforma-sdk/package-builder':
         specifier: 'catalog:'
-        version: 3.2.1
+        version: 3.8.0
 
 packages:
 
@@ -335,8 +335,8 @@ packages:
     resolution: {integrity: sha512-cef5ysA011ub5bofbWQJ3EM9rZ7A4ixGMKhFIsF2VNwYrCu5XRHsayA6vDeFOBjX4Jnq9D0QztW0JUxXD73bpw==}
     hasBin: true
 
-  '@platforma-sdk/package-builder@3.2.1':
-    resolution: {integrity: sha512-JVXUkGLvBv5OAaJ2ba8YyZ9rKeihobRhzLmsfW9pdmoHbp4snDx5cbsd8Rt8HwliV449TFccSsltlwRXSSb2Ng==}
+  '@platforma-sdk/package-builder@3.8.0':
+    resolution: {integrity: sha512-sXTSGLA5yazqAo917z2nZ4qTEdY6pYxGAq79DZewQt3Ml5JTYFYt1d3SHojm0FArXsit1JkyQT01uDuDoPkBCQ==}
     hasBin: true
 
   '@smithy/abort-controller@4.0.5':
@@ -557,8 +557,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@20.16.15':
-    resolution: {integrity: sha512-DV58qQz9dBMqVVn+qnKwGa51QzCD4YM/tQM16qLKxdf5tqz5W4QwtrMzjSTbabN1cFTSuyxVYBy+QWHjWW8X/g==}
+  '@types/node@24.5.2':
+    resolution: {integrity: sha512-FYxk1I7wPv3K2XBaoyH2cTnocQEu8AOZ60hPbsyukMPLv5/5qr7V1i8PLHdl6Zf87I+xZXFvPCXYjiTFq+YSDQ==}
 
   '@types/readdir-glob@1.1.5':
     resolution: {integrity: sha512-raiuEPUYqXu+nvtY2Pe8s8FEmZ3x5yAH4VkLdihcPdalvsHltomrRC9BzuStrJ9yk06470hS0Crw0f1pXqD+Hg==}
@@ -1269,8 +1269,8 @@ packages:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@7.12.0:
+    resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
 
   universalify@0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
@@ -1837,7 +1837,7 @@ snapshots:
     dependencies:
       '@changesets/types': 6.1.0
 
-  '@changesets/cli@2.29.6(@types/node@20.16.15)':
+  '@changesets/cli@2.29.6(@types/node@24.5.2)':
     dependencies:
       '@changesets/apply-release-plan': 7.0.12
       '@changesets/assemble-release-plan': 6.0.9
@@ -1853,7 +1853,7 @@ snapshots:
       '@changesets/should-skip-package': 0.1.2
       '@changesets/types': 6.1.0
       '@changesets/write': 0.4.0
-      '@inquirer/external-editor': 1.0.1(@types/node@20.16.15)
+      '@inquirer/external-editor': 1.0.1(@types/node@24.5.2)
       '@manypkg/get-packages': 1.1.3
       ansi-colors: 4.1.3
       ci-info: 3.9.0
@@ -1960,12 +1960,12 @@ snapshots:
       enabled: 2.0.0
       kuler: 2.0.0
 
-  '@inquirer/external-editor@1.0.1(@types/node@20.16.15)':
+  '@inquirer/external-editor@1.0.1(@types/node@24.5.2)':
     dependencies:
       chardet: 2.1.0
       iconv-lite: 0.6.3
     optionalDependencies:
-      '@types/node': 20.16.15
+      '@types/node': 24.5.2
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2038,14 +2038,14 @@ snapshots:
     dependencies:
       yaml: 2.8.1
 
-  '@platforma-sdk/package-builder@3.2.1':
+  '@platforma-sdk/package-builder@3.8.0':
     dependencies:
       '@aws-sdk/client-s3': 3.859.0
       '@aws-sdk/lib-storage': 3.859.0(@aws-sdk/client-s3@3.859.0)
       '@milaboratories/resolve-helper': 1.1.1
       '@oclif/core': 4.5.2
       '@types/archiver': 6.0.3
-      '@types/node': 20.16.15
+      '@types/node': 24.5.2
       archiver: 7.0.1
       canonicalize: 2.1.0
       tar: 7.4.3
@@ -2397,13 +2397,13 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.16.15':
+  '@types/node@24.5.2':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 7.12.0
 
   '@types/readdir-glob@1.1.5':
     dependencies:
-      '@types/node': 20.16.15
+      '@types/node': 24.5.2
 
   '@types/triple-beam@1.3.5': {}
 
@@ -3048,7 +3048,7 @@ snapshots:
 
   type-fest@0.21.3: {}
 
-  undici-types@6.19.8: {}
+  undici-types@7.12.0: {}
 
   universalify@0.1.2: {}
 
